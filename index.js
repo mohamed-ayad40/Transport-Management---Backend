@@ -35,9 +35,9 @@ app.use('/api/', limiter);
 // CORS
 app.use(cors({
     origin: process.env.NODE_ENV === 'production'
-        ? ['https://your-domain.com']
+        ? ['transport-management-frontend-azure.vercel.app']
         : ['http://localhost:3000'],
-    credentials: true
+    credentials: false
 }));
 
 // Logging
