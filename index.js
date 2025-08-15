@@ -39,7 +39,8 @@ app.use(cors({
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
+app.enable("trust proxy");
+app.set("trust proxy", 1);
 // Logging
 app.use(morgan('combined'));
 
