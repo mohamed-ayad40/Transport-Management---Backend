@@ -36,7 +36,8 @@ app.use('/api/', limiter);
 app.use(cors({
     origin: 'transport-management-frontend-azure.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // Logging
